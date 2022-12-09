@@ -28,7 +28,12 @@ for(x, y, w, h) in faces:
     for(sx, sy, sw, sh) in mouth:
         cv2.rectangle(face_color, (sx, sy), (sw+sw, sy+sh), (40, 0, 40), 2)    
 
-#결과 출력
+#결과 출력 - ver 1
+'''
 cv2.imshow('img', img)
+'''
+
+#결과 출력 - ver 2
+cv2.imwrite('face_cascade.jpg', img)
 key=cv2.waitKey(0)
 cv2.destroyAllWindows()
